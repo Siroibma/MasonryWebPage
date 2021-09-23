@@ -2,7 +2,7 @@
 var MasonryApp = new Vue ({
     el : "#masonryApp",
     data : [
-        ifHidden = false,
+        ifHidden = true,
     ],
     mounted : function () {
         var elem = document.querySelector('.grid');
@@ -11,6 +11,15 @@ var MasonryApp = new Vue ({
             percentPosition: true,
             columnWidth: '.grid-sizer',
         });
-    }
+    },
+    methods : {
+        mouseover : function(){
+            ifHidden = false;
+        },
+        mouseleave : function() {
+            ifHidden = true;
+        }
+
+    },
 
 });
