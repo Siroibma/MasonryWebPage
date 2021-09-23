@@ -1,4 +1,8 @@
-* { box-sizing: border-box; }
+* { 
+  box-sizing: border-box; 
+  font-family: 'Koh Santepheap', cursive;
+  text-align: center;
+}
 
 /* force scrollbar */
 html { overflow-y: scroll; }
@@ -8,7 +12,9 @@ body { font-family: sans-serif; }
 /* ---- grid ---- */
 
 .grid {
-  background: #DDD;
+  background: rgb(77, 82, 85);
+  width: 84%;
+  float : right;
 }
 
 /* clear fix */
@@ -22,7 +28,11 @@ body { font-family: sans-serif; }
 
 .grid-sizer,
 .grid-item {
-  width: 400px;
+  width: 30.3333%;
+  margin-right: 1%;
+  margin-top: 1%;
+  margin-left: 2%;
+  
 }
 
 img {
@@ -37,3 +47,58 @@ img {
   display: block;
   max-width: 100%;
 }
+
+.vertical-nav {
+  min-width: 16%;
+  width: 16%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s;
+}
+
+.page-content {
+  width: calc(100% - 17rem);
+  margin-left: 17rem;
+  transition: all 0.4s;
+}
+
+/* for toggle behavior */
+
+#sidebar.active {
+  margin-left: -17rem;
+}
+
+#content.active {
+  width: 100%;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  #sidebar {
+    margin-left: -17rem;
+  }
+  #sidebar.active {
+    margin-left: 0;
+  }
+  #content {
+    width: 100%;
+    margin: 0;
+  }
+  #content.active {
+    margin-left: 17rem;
+    width: calc(100% - 17rem);
+  }
+}
+
+.m0 {
+  margin:0 auto;
+}
+
+.nav-item:hover > a {
+  color: blue;
+  opacity: .4;
+}
+
