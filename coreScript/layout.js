@@ -12,14 +12,7 @@ var MasonryApp = new Vue ({
             columnWidth: '.grid-sizer',
         });
     },
-    methods : {
-        mouseover : function(){
-            ifHidden = false;
-        },
-        mouseleave : function() {
-            ifHidden = true;
-        }
 
-    },
+
 
 });
