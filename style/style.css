@@ -7,14 +7,16 @@
 /* force scrollbar */
 html { overflow-y: scroll; }
 
-body { font-family: sans-serif; }
+body { font-family: sans-serif;}
 
 /* ---- grid ---- */
 
 .grid {
   background: rgb(77, 82, 85);
-  width: 84%;
-  float : right;
+  width: 100vh;
+  left: 65vh;
+  min-height: 100vh;
+  margin-top: 0%;
 }
 
 /* clear fix */
@@ -109,10 +111,6 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-.grid-item:hover {
-  filter: opacity(50%);
 }
 
 .grid-item > a {
